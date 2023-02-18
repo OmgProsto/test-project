@@ -7,10 +7,10 @@ import (
 	"testproject/internal/cmd/entity"
 )
 
-type EntityModel struct {
+type JsonToUrlsService struct {
 }
 
-func (e EntityModel) JsonToEntity(jsonString string) entity.Urls {
+func (e JsonToUrlsService) JsonToEntity(jsonString string) entity.Urls {
 	var urls entity.Urls
 
 	err := json.Unmarshal([]byte(jsonString), &urls)

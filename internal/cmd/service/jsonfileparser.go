@@ -1,18 +1,18 @@
 package service
 
 import (
-	"fmt"
 	"io"
+	"log"
 	"os"
 )
 
-type FileParser struct {
+type JsonFileParser struct {
 }
 
-func (f FileParser) Parse(fileName string) string {
+func (f JsonFileParser) Parse(fileName string) string {
 	file, err := os.Open(fileName)
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalln(err)
 		os.Exit(1)
 	}
 	defer file.Close()
