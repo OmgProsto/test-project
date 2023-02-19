@@ -1,6 +1,18 @@
 package check_service
 
+import (
+	"testproject/internal/cmd/service/check_service/status_code"
+	"testproject/internal/cmd/service/check_service/text"
+)
+
+const checkStatusCode = "status_code"
+const checkText = "text"
+
 type CheckService struct {
+}
+
+type Checker interface {
+	Check() bool
 }
 
 func (c CheckService) Check(check Check) (bool, []string) {
@@ -9,13 +21,13 @@ func (c CheckService) Check(check Check) (bool, []string) {
 
 	for _, v := range check.Checks {
 		switch v {
-		case "status_code":
-			if !c.checkStatusCode(check.Data.StatusCode) {
+		case checkStatusCode:
+			if !c.check(status_code.NewStatusCodeChecker(check.Data.StatusCode)) {
 				invalidCheck = append(invalidCheck, v)
 			}
 
-		case "text":
-			if !c.checkText(check.Data.Text) {
+		case checkText:
+			if !c.check(text.NewTextChecker(check.Data.Text)) {
 				invalidCheck = append(invalidCheck, v)
 			}
 		}
@@ -24,10 +36,6 @@ func (c CheckService) Check(check Check) (bool, []string) {
 	return len(invalidCheck) < check.MinChecksCount, invalidCheck
 }
 
-func (c CheckService) checkStatusCode(statusCode int) bool {
-	return statusCode == 200
-}
-
-func (c CheckService) checkText(text string) bool {
-	return text == "ok"
+func (c CheckService) check(checker Checker) bool {
+	return checker.Check()
 }

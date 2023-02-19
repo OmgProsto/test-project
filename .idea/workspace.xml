@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c62d54b-0264-41fc-9f0d-1cb96de99dd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/cmd/handlers/check_site/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cmd/service/check_service/entity.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cmd/service/check_service/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cmd/service/data_site_service/entity.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cmd/service/data_site_service/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cmd/service/print_service/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/client/get/request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/json/json_service/entity/url.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/json/json_service/entity/urls.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/json/json_service/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/entity/sitedata/datasite.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/entity/url.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/entity/urls.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/handlers/checksitehandler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/repository/requestrepository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/service/checkservice.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/service/getdatasiteservice.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/service/jsonfileparser.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/json/json_service/parser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/service/jsontourlsservice.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/service/printresultchecksservice.go" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/cmd/service/check_service/status_code/checker.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/cmd/service/check_service/text/checker.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/cmd/service/check_service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cmd/service/check_service/service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
