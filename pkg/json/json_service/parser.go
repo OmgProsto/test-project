@@ -1,4 +1,4 @@
-package service
+package json_service
 
 import (
 	"io"
@@ -6,10 +6,10 @@ import (
 	"os"
 )
 
-type JsonFileParser struct {
+type FileParser struct {
 }
 
-func (f JsonFileParser) Parse(fileName string) string {
+func (f FileParser) Parse(fileName string) string {
 	file, err := os.Open(fileName)
 	if err != nil {
 		log.Fatalln(err)

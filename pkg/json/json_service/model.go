@@ -1,16 +1,16 @@
-package service
+package json_service
 
 import (
 	"encoding/json"
 	"log"
 	"os"
-	"testproject/internal/cmd/entity"
+	"testproject/pkg/json/json_service/entity"
 )
 
-type JsonToUrlsService struct {
+type UrlModel struct {
 }
 
-func (e JsonToUrlsService) JsonToEntity(jsonString string) entity.Urls {
+func (e UrlModel) JsonToEntity(jsonString string) entity.Urls {
 	var urls entity.Urls
 
 	err := json.Unmarshal([]byte(jsonString), &urls)

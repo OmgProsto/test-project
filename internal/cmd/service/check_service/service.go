@@ -1,29 +1,27 @@
-package service
-
-import "testproject/internal/cmd/entity/sitedata"
+package check_service
 
 type CheckService struct {
 }
 
-func (c CheckService) Check(dataSite sitedata.DataSiteEntity, check []string, count int) (bool, []string) {
+func (c CheckService) Check(check Check) (bool, []string) {
 
 	var invalidCheck []string
 
-	for _, v := range check {
+	for _, v := range check.Checks {
 		switch v {
 		case "status_code":
-			if !c.checkStatusCode(dataSite.StatusCode) {
+			if !c.checkStatusCode(check.Data.StatusCode) {
 				invalidCheck = append(invalidCheck, v)
 			}
 
 		case "text":
-			if !c.checkText(dataSite.Text) {
+			if !c.checkText(check.Data.Text) {
 				invalidCheck = append(invalidCheck, v)
 			}
 		}
 	}
 
-	return len(invalidCheck) < count, invalidCheck
+	return len(invalidCheck) < check.MinChecksCount, invalidCheck
 }
 
 func (c CheckService) checkStatusCode(statusCode int) bool {

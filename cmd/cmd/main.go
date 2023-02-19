@@ -1,9 +1,11 @@
 package main
 
-import "testproject/internal/cmd/handlers"
+import (
+	"testproject/internal/cmd/handlers/check_site"
+)
 
 func main() {
-	cHandler := handlers.NewCheckSiteHandler()
+	cHandler := check_site.NewCheckSiteHandler()
 
 	cHandler.Handle()
 }

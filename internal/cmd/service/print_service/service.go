@@ -1,14 +1,14 @@
-package service
+package print_service
 
 import (
 	"fmt"
 	"strings"
 )
 
-type PrintResultChecksService struct {
+type PrintResultService struct {
 }
 
-func (p PrintResultChecksService) Print(url string, ok bool, invalidChecks []string) {
+func (p PrintResultService) Print(url string, ok bool, invalidChecks []string) {
 	status := "ok"
 	invalidChecksString := ""
 
